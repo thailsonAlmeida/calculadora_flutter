@@ -6,13 +6,16 @@ class Calculator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Material(
-        child: Column(
-          children: <Widget>[
-            SizedBox(height: 220),
-            Screen(),
-          ],
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: const Column(
+            children: <Widget>[
+              SizedBox(height: 220),
+              Screen(),
+            ],
+          ),
         ),
       ),
     );

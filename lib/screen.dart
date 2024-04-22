@@ -11,10 +11,10 @@ class _ScreenState extends State<Screen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: const Text(
-        '0',
+      child: Text(
+        '0', //deixar texto responsivo no screen
         textAlign: TextAlign.right,
-        style: TextStyle(fontSize: 80),
+        style: const TextStyle(fontSize: 80),
       ),
       decoration: const BoxDecoration(color: Colors.amber),
       width: double.infinity,
