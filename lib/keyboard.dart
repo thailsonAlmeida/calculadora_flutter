@@ -6,86 +6,91 @@ class Keyboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             ButtonCustom(
               text: 'AC',
-              color: Color.fromARGB(255, 212, 212, 212),
+              color: const Color.fromARGB(255, 212, 212, 212),
+              onTap: () => print('AC'),
             ),
             ButtonCustom(
               text: '+/_',
-              color: Color.fromARGB(255, 212, 212, 212),
+              color: const Color.fromARGB(255, 212, 212, 212),
+              onTap: () => print('+/_'),
             ),
             ButtonCustom(
               text: '%',
-              color: Color.fromARGB(255, 212, 212, 212),
+              color: const Color.fromARGB(255, 212, 212, 212),
+              onTap: () => print('%'),
             ),
             ButtonCustom(
               text: '/',
               color: Colors.orange,
+              onTap: () => print('/'),
             ),
           ],
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            ButtonCustom(text: '7'),
-            ButtonCustom(text: '8'),
-            ButtonCustom(text: '9'),
+            ButtonCustom(text: '7', onTap: () => print('7')),
+            ButtonCustom(text: '8', onTap: () => print('8')),
+            ButtonCustom(text: '9', onTap: () => print('9')),
             ButtonCustom(
               text: 'x',
               color: Colors.orange,
+              onTap: () => print('x'),
             ),
           ],
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            ButtonCustom(text: '4'),
-            ButtonCustom(text: '5'),
-            ButtonCustom(text: '6'),
+            ButtonCustom(text: '4', onTap: () => print('4')),
+            ButtonCustom(text: '5', onTap: () => print('5')),
+            ButtonCustom(text: '6', onTap: () => print('6')),
             ButtonCustom(
               text: '-',
               color: Colors.orange,
+              onTap: () => print('-'),
             ),
           ],
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            ButtonCustom(text: '1'),
-            ButtonCustom(text: '2'),
-            ButtonCustom(text: '3'),
+            ButtonCustom(text: '1', onTap: () => print('1')),
+            ButtonCustom(text: '2', onTap: () => print('2')),
+            ButtonCustom(text: '3', onTap: () => print('3')),
             ButtonCustom(
               text: '+',
               color: Colors.orange,
+              onTap: () => print('+'),
             ),
           ],
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            ButtonCustom(
-              text: '0',
-              width: 160,
-            ),
-            ButtonCustom(text: ','),
+            ButtonCustom(text: '0', width: 160, onTap: () => print('0')),
+            ButtonCustom(text: ',', onTap: () => print(',')),
             ButtonCustom(
               text: '=',
               color: Colors.orange,
+              onTap: () => print('='),
             ),
           ],
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
       ],
     );
   }
