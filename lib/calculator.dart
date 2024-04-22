@@ -1,3 +1,4 @@
+import 'package:calculadora_flutter/keyboard.dart';
 import 'package:calculadora_flutter/screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class Calculator extends StatelessWidget {
             children: <Widget>[
               SizedBox(height: 220),
               Screen(),
+              Keyboard(),
             ],
           ),
         ),
