@@ -10,11 +10,11 @@ class Screen extends StatefulWidget {
 class _ScreenState extends State<Screen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return const SizedBox(
       width: double.infinity,
       height: 110,
-      decoration: const BoxDecoration(color: Colors.green),
-      child: const Text(
+      //decoration: const BoxDecoration(color: Colors.green),
+      child: Text(
         '0', //deixar texto responsivo no screen
         textAlign: TextAlign.right,
         style: TextStyle(fontSize: 80),
