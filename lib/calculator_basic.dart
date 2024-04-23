@@ -163,9 +163,6 @@ class _CalculatorBasicState extends State<CalculatorBasic> {
                         onTap: () {
                           controllerOperation(screenViewNumber, '/');
                           screenViewNumber = '0';
-                          print(numbersList);
-                          print(simbolList);
-                          print(screenViewNumber);
                         },
                       ),
                     ],
@@ -318,9 +315,6 @@ class _CalculatorBasicState extends State<CalculatorBasic> {
                           setState(() {
                             screenViewNumber = calcOperation(
                                 numbersList, simbolList, screenViewNumber);
-                            print(numbersList);
-                            print(simbolList);
-                            print(screenViewNumber);
                           });
                         },
                       ),
