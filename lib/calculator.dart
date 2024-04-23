@@ -13,7 +13,7 @@ class Calculator extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: const Column(
             children: <Widget>[
-              SizedBox(height: 220),
+              SizedBox(height: 160),
               Screen(),
               Keyboard(),
             ],

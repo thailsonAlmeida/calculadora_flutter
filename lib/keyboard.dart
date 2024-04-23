@@ -81,8 +81,17 @@ class Keyboard extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            ButtonCustom(text: '0', width: 160, onTap: () => print('0')),
-            ButtonCustom(text: ',', onTap: () => print(',')),
+            ButtonCustom(
+              text: '0',
+              width: 160,
+              onTap: () {
+                '0';
+              },
+            ),
+            ButtonCustom(
+              text: ',',
+              onTap: () => '',
+            ),
             ButtonCustom(
               text: '=',
               color: Colors.orange,

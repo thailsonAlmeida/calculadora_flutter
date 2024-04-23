@@ -19,7 +19,7 @@ class ButtonCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: color,
-      elevation: 7,
+      elevation: 1,
       borderRadius: BorderRadius.circular(50),
       child: InkWell(
         borderRadius: BorderRadius.circular(50),
