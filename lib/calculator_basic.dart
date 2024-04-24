@@ -1,5 +1,6 @@
 import 'package:calculadora_flutter/widgets/button_custom.dart';
 import 'package:flutter/material.dart';
+import 'package:brasil_fields/brasil_fields.dart';
 
 class CalculatorBasic extends StatefulWidget {
   const CalculatorBasic({super.key});
@@ -65,18 +66,33 @@ class _CalculatorBasicState extends State<CalculatorBasic> {
               double.parse(numbersList[0]) + double.parse(screenViewNumber);
           numbersList.clear();
           simbolList.clear();
+          String resultViewString = resulView.toString();
+          List<String> verifyResultViewString = resultViewString.split('.');
+          if (int.parse(verifyResultViewString[1]) * 1 == 0) {
+            return verifyResultViewString[0];
+          }
           return resulView.toStringAsFixed(2).toString();
         case '-':
           resulView =
               double.parse(numbersList[0]) - double.parse(screenViewNumber);
           numbersList.clear();
           simbolList.clear();
+          String resultViewString = resulView.toString();
+          List<String> verifyResultViewString = resultViewString.split('.');
+          if (int.parse(verifyResultViewString[1]) * 1 == 0) {
+            return verifyResultViewString[0];
+          }
           return resulView.toStringAsFixed(2).toString();
         case '*':
           resulView =
               double.parse(numbersList[0]) * double.parse(screenViewNumber);
           numbersList.clear();
           simbolList.clear();
+          String resultViewString = resulView.toString();
+          List<String> verifyResultViewString = resultViewString.split('.');
+          if (int.parse(verifyResultViewString[1]) * 1 == 0) {
+            return verifyResultViewString[0];
+          }
           return resulView.toStringAsFixed(2).toString();
         case '/':
           if (double.parse(screenViewNumber) == 0) {
@@ -88,6 +104,11 @@ class _CalculatorBasicState extends State<CalculatorBasic> {
                 double.parse(numbersList[0]) / double.parse(screenViewNumber);
             numbersList.clear();
             simbolList.clear();
+            String resultViewString = resulView.toString();
+            List<String> verifyResultViewString = resultViewString.split('.');
+            if (int.parse(verifyResultViewString[1]) * 1 == 0) {
+              return verifyResultViewString[0];
+            }
             return resulView.toStringAsFixed(2).toString();
           }
       }
@@ -120,9 +141,11 @@ class _CalculatorBasicState extends State<CalculatorBasic> {
                 width: double.infinity,
                 height: 110,
                 child: Text(
-                  screenViewNumber, //deixar texto responsivo no screen
+                  screenViewNumber,
+                  //deixar texto responsivo no screen
                   textAlign: TextAlign.right,
-                  style: const TextStyle(fontSize: 80),
+                  style: const TextStyle(fontSize: 40),
+                  maxLines: 1,
                 ),
               ),
 
@@ -163,6 +186,9 @@ class _CalculatorBasicState extends State<CalculatorBasic> {
                         onTap: () {
                           controllerOperation(screenViewNumber, '/');
                           screenViewNumber = '0';
+                          print(numbersList);
+                          print(simbolList);
+                          print(screenViewNumber);
                         },
                       ),
                     ],
